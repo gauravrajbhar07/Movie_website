@@ -1,7 +1,7 @@
 // context < API ></ >
 // useContext hook
 
-import React from "react";
+import React, { useContext } from "react";
 
 
 // context(warehouse)                      // easy
@@ -20,4 +20,11 @@ const AppProvider = ({ childer }) => {
     </AppContext.Provider>
 }
 
-export { AppContext, AppProvider }
+
+//global custom hook
+
+const useGlobalContext = () => {
+    return useContext(AppContext)
+}
+
+export { AppContext, AppProvider, useGlobalContext }
